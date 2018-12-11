@@ -12,7 +12,7 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var mainTableView: UITableView!
     
-    var uiViewArr: [UIView] = []
+    var uiViewArr: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,18 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
-       uiViewArr.append(mainTableView)
+       uiViewArr.append("Table View")
+       uiViewArr.append("Collection View")
 
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ mainTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "tableViewIdentifier", sender: self)
+        if uiViewArr[indexPath.row] == "Table View" {
+            self.performSegue(withIdentifier: "tableViewIdentifier", sender: self)
+        } else if uiViewArr[indexPath.row] == "Collection View" {
+            self.performSegue(withIdentifier: "collectionViewIdentifier", sender: self)
+        }
     }
     
     func tableView(_ mainTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,11 +41,9 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ mainTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = mainTableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as! aTableViewCell
-        let mainTableViewText = "tableView"
-        cell.textLabel?.text = mainTableViewText
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as! ATableViewCell
+        cell.textLabel?.text = uiViewArr[indexPath.row]
         return cell
-        
     }
     
     

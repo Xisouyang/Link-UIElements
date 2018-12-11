@@ -10,7 +10,7 @@ import UIKit
 
 
 //class must exist for the cell, cell's class name must be the same as this class
-class aTableViewCell: UITableViewCell {
+class ATableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

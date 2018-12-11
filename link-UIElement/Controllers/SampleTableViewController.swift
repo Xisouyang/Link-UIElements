@@ -27,7 +27,7 @@ class SampleTableViewController: UIViewController, UITableViewDelegate, UITableV
     //returns the cell itself
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as! aTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as! ATableViewCell
         let text = tableViewData[indexPath.row]
         cell.textLabel?.text = text
         return cell
