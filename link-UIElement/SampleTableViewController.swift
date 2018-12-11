@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 // Must add tableView Delegate and Data Source
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SampleTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sampleTableView: UITableView!
     var tableViewData: [String] = []
     let string = "Hello World"
     
@@ -38,8 +38,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view, typically from a nib.
         
         //Must set delegate and dataSource for tableView to show changes
-        tableView.delegate = self
-        tableView.dataSource = self
+        sampleTableView.delegate = self
+        sampleTableView.dataSource = self
         
         for i in 0...100 {
             tableViewData.append(string)
