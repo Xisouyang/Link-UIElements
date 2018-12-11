@@ -31,7 +31,7 @@ class SampleCollectionViewController: UIViewController, UICollectionViewDelegate
         sampleCollectionView.delegate = self
         sampleCollectionView.dataSource = self
         
-        for i in 0...101 {
+        for i in 0...100 {
             numArr.append(i)
         }
 
