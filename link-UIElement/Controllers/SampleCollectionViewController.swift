@@ -8,22 +8,11 @@
 
 import UIKit
 
-class SampleCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+class SampleCollectionViewController: UIViewController {
     
     @IBOutlet weak var sampleCollectionView: UICollectionView!
     
     var numArr: [Int] = []
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numArr.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ACollectionViewCell.identifier, for: indexPath) as! ACollectionViewCell
-        cell.aLabel.text = String(numArr[indexPath.item])
-        cell.backgroundColor = UIColor(red: cell.random(), green: cell.random(), blue: cell.random(), alpha: 1)
-        return cell
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +27,6 @@ class SampleCollectionViewController: UIViewController, UICollectionViewDelegate
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    
     /*
      // MARK: - Navigation
      
@@ -50,5 +36,18 @@ class SampleCollectionViewController: UIViewController, UICollectionViewDelegate
      // Pass the selected object to the new view controller.
      }
      */
+}
+
+extension SampleCollectionViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ACollectionViewCell.identifier, for: indexPath) as! ACollectionViewCell
+        cell.aLabel.text = String(numArr[indexPath.item])
+        cell.backgroundColor = UIColor(red: cell.random(), green: cell.random(), blue: cell.random(), alpha: 1)
+        return cell
+    }
 }

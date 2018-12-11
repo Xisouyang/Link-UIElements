@@ -15,8 +15,8 @@
 		5D257ECD21BF20DC0055AA15 /* ATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D257ECC21BF20DC0055AA15 /* ATableViewCell.swift */; };
 		5D257ECF21BF31460055AA15 /* TItleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D257ECE21BF31460055AA15 /* TItleViewController.swift */; };
 		5D257ED321BF364F0055AA15 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D257ED221BF364F0055AA15 /* MainTableViewController.swift */; };
-		5D257EDA21BF99380055AA15 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D257ED921BF99380055AA15 /* SampleCollectionViewController.swift */; };
 		5D257EDE21BFAC420055AA15 /* ACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D257EDD21BFAC420055AA15 /* ACollectionViewCell.swift */; };
+		5D257EE221BFB1F30055AA15 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D257EE121BFB1F30055AA15 /* SampleCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		5D257ECC21BF20DC0055AA15 /* ATableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATableViewCell.swift; sourceTree = "<group>"; };
 		5D257ECE21BF31460055AA15 /* TItleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TItleViewController.swift; sourceTree = "<group>"; };
 		5D257ED221BF364F0055AA15 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		5D257ED921BF99380055AA15 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleCollectionViewController.swift; path = ../../SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		5D257EDD21BFAC420055AA15 /* ACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACollectionViewCell.swift; sourceTree = "<group>"; };
+		5D257EE121BFB1F30055AA15 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				5D257EBA21BF18650055AA15 /* AppDelegate.swift */,
+				5D257ED421BF97310055AA15 /* Models */,
 				5D257ED621BF974E0055AA15 /* Views */,
 				5D257ED521BF97420055AA15 /* Controllers */,
-				5D257ED421BF97310055AA15 /* Models */,
 				5D257EBE21BF18650055AA15 /* Main.storyboard */,
 				5D257EC121BF18670055AA15 /* Assets.xcassets */,
 				5D257EC321BF18670055AA15 /* LaunchScreen.storyboard */,
@@ -86,7 +86,7 @@
 		5D257ED521BF97420055AA15 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D257ED921BF99380055AA15 /* SampleCollectionViewController.swift */,
+				5D257EE121BFB1F30055AA15 /* SampleCollectionViewController.swift */,
 				5D257EBC21BF18650055AA15 /* SampleTableViewController.swift */,
 				5D257ED221BF364F0055AA15 /* MainTableViewController.swift */,
 				5D257ECE21BF31460055AA15 /* TItleViewController.swift */,
@@ -174,12 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D257EE221BFB1F30055AA15 /* SampleCollectionViewController.swift in Sources */,
 				5D257EBD21BF18650055AA15 /* SampleTableViewController.swift in Sources */,
 				5D257ECD21BF20DC0055AA15 /* ATableViewCell.swift in Sources */,
 				5D257EDE21BFAC420055AA15 /* ACollectionViewCell.swift in Sources */,
 				5D257EBB21BF18650055AA15 /* AppDelegate.swift in Sources */,
 				5D257ED321BF364F0055AA15 /* MainTableViewController.swift in Sources */,
-				5D257EDA21BF99380055AA15 /* SampleCollectionViewController.swift in Sources */,
 				5D257ECF21BF31460055AA15 /* TItleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

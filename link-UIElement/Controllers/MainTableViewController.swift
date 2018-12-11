@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainTableViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     
@@ -26,6 +26,19 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         // Do any additional setup after loading the view.
     }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+}
+
+extension MainTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ mainTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if uiViewArr[indexPath.row] == "Table View" {
@@ -45,18 +58,4 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel?.text = uiViewArr[indexPath.row]
         return cell
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

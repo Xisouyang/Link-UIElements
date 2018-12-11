@@ -10,12 +10,27 @@ import Foundation
 import UIKit
 
 // Must add tableView Delegate and Data Source
-class SampleTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SampleTableViewController: UIViewController {
     
     @IBOutlet weak var sampleTableView: UITableView!
     var tableViewData: [String] = []
     let string = "Hello World"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Must set delegate and dataSource for tableView to show changes
+        sampleTableView.delegate = self
+        sampleTableView.dataSource = self
+        
+        for i in 0...100 {
+            tableViewData.append(string)
+        }
+    }
+}
+
+extension SampleTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     //returns the amount of rows the tableView will have
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,19 +46,6 @@ class SampleTableViewController: UIViewController, UITableViewDelegate, UITableV
         let text = tableViewData[indexPath.row]
         cell.textLabel?.text = text
         return cell
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //Must set delegate and dataSource for tableView to show changes
-        sampleTableView.delegate = self
-        sampleTableView.dataSource = self
-        
-        for i in 0...100 {
-            tableViewData.append(string)
-        }
     }
 }
 
